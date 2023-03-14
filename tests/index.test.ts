@@ -44,6 +44,17 @@ describe("tests the function calculateTax", () => {
 
         expect(valueToPay).toEqual(salary * 0.225);
     });
+
+    it("should return the value to people would pay 27,5% income tax", () => {
+        const minSalary = 5300;
+        const maxSalary = 30000;
+
+        const salary = generateSalary(minSalary, maxSalary);
+
+        const valueToPay = calculateTax(salary);
+
+        expect(valueToPay).toEqual(salary * 0.275);
+    });
 });
 
 function generateSalary(min: number, max: number) {
