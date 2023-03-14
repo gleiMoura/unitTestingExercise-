@@ -1,4 +1,4 @@
-export function calculateTax(salary: number) {
+export default function calculateTax(salary: number) {
   if (salary < 2500) {
     return 0;
   } else if (salary < 3200) {
