@@ -10,6 +10,17 @@ describe("tests the function calculateTax", () => {
         const valueToPay = calculateTax(salary);
 
         expect(valueToPay).toEqual(0);
+    });
+
+    it("should return the the value to people woloud pay 7,5%", () => {
+        const minSalary = 2500;
+        const maxSalary = 3199.99;
+
+        const salary = generateSalary(minSalary, maxSalary);
+        
+        const valueToPay = calculateTax(salary);
+
+        expect(valueToPay).toEqual(salary * 0.075);
     })
 });
 
